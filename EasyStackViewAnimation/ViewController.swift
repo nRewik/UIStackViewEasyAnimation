@@ -20,7 +20,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    
+}
+
+extension ViewController{
     @IBAction func toggleBButtonTapped(_ sender: Any) {
         showB = !showB
         UIView.animate(withDuration: 0.3){
@@ -34,7 +36,5 @@ class ViewController: UIViewController {
             self.viewC.isHidden = !self.showC
         }
     }
-    
-    
 }
 
