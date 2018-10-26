@@ -20,22 +20,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    
-    @IBAction func toggleBButtonTapped() {
+}
+
+extension ViewController{
+    @IBAction func toggleBButtonTapped(_ sender: Any) {
         showB = !showB
-        UIView.animateWithDuration(0.3){
-            self.viewB.hidden = !self.showB
+        UIView.animate(withDuration: 0.3){
+            self.viewB.isHidden = !self.showB
         }
-        
     }
     
-    @IBAction func toggleCButtonTapped(sender: AnyObject) {
+    @IBAction func toggleCButtonTapped(_ sender: Any) {
         showC = !showC
-        UIView.animateWithDuration(0.3){
-            self.viewC.hidden = !self.showC
+        UIView.animate(withDuration: 0.3){
+            self.viewC.isHidden = !self.showC
         }
     }
-    
-    
 }
 
